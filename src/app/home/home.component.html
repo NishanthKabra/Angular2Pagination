@@ -1,0 +1,17 @@
+<div>
+    <div class='panel panel-primary'>
+        <div class='panel-heading'>
+            {{pageTitle}}
+        </div>
+    </div>
+    <pagination
+                class="pagination-sm"
+                [directionLinks]="true"
+                [totalItems]="length"
+                [(ngModel)]="page"
+                [maxSize]="maxSize"
+                [boundaryLinks]="false"
+                (pageChanged)="pageChangedEventSubscriber($event)"
+                (numPages)="numberOfPagesEventSubscriber($event)">
+    </pagination>
+</div>
